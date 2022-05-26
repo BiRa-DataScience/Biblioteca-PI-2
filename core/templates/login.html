@@ -1,0 +1,66 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1 class="text-center">ACESSO</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Basic -->
+    <div class="ex-form-1 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="text-box mt-5 mb-5">
+                        <p class="mb-4">Caso não seja cadastrado vá a sua biblioteca ou diretoria e solicite o cadastro. </p>
+
+                        <!-- Log In Form -->
+                        <form id="logInForm">
+                            <div class="form-group">
+                                <input type="email" class="form-control-input" id="email" required>
+                                <label class="label-control" for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control-input" id="senha" required>
+                                <label class="label-control" for="senha">Senha</label>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="terms" value="Agreed-to-Terms" required>Eu concordo com os termos <a href="privacy.html">Politica de Privacidade</a> and <a href="terms.html">Termos e Condições</a>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">Log In</button>
+                            </div>
+                        </form>
+                        <!-- end of log in form -->
+
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+    <!-- VLIBRAS -->
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+
+{% endblock %}
